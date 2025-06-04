@@ -15,10 +15,8 @@ def  get_char_usage(book): # gets the count of each individual character within 
         else: char_count[char] += 1
     return char_count
 
-#def get_sorted_chars(char_dictionary):
-#    sorted_chars = []
-#    for char in char_dictionary:
-#        sorted_chars.append(char)
-#    return sorted_chars
+def get_sorted_chars(listed_dicts): # Sorts dictionary
+        
+    return listed_dicts["num"]
 
 
