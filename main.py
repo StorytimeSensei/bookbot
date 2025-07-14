@@ -13,12 +13,18 @@ def main ():
     dict_chars = (get_char_usage(get_book_text("books/frankenstein.txt")))
     for char in dict_chars:
         listed_dicts.append({"char":char,"num":dict_chars[char]})
+    
     listed_dicts.sort(reverse=True,key=get_sorted_chars)
 
+    print("============ BOOKBOT ============")
+    print("Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count ----------")
     print(f'{get_word_count(get_book_text("books/frankenstein.txt"))} words found in the document')
-    print(listed_dicts)
-    
-
+    print("--------- Character Count -------")
+    for word in listed_dicts:
+        if word['char'].isalpha():
+            print(f'{word['char']}: {word['num']}')
+    print("============= END ===============")
     
     
 main()
