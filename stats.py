@@ -1,3 +1,8 @@
+def get_book_text (book_location): # function gets the contents of a book (file)
+    with open(book_location) as f:
+        book_contents = f.read()
+    return book_contents
+
 def get_word_count(book): # get the total word count of the book
     num_words = 0
     words =[]
